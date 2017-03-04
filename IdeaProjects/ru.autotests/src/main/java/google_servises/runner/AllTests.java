@@ -5,7 +5,8 @@ package google_servises.runner;
  * Created: 04.03.17 12:55
  */
 
-import google_servises.registration.SuiteRegistrationTest;
+import google_servises.common.page.PageStartUp;
+import google_servises.email.SuiteEmailTest;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
@@ -14,7 +15,7 @@ import org.openqa.selenium.WebDriver;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        SuiteRegistrationTest.class
+        SuiteEmailTest.class
 })
 
 public class AllTests {
@@ -26,6 +27,8 @@ public class AllTests {
 
 @AfterClass
     public static void closeBrowser(){
+    PageStartUp.buttonAccountGoogle().click();
+    PageStartUp.buttonSignOut().click();
     GlobalProperties.getDriver().quit();
 }
 

@@ -1,6 +1,5 @@
-package google_servises.registration;
+package google_servises.email;
 
-import google_servises.registration.test.TestRegistration;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -12,6 +11,6 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
         TestRegistration.class})
 
-public class SuiteRegistrationTest {
+public class SuiteEmailTest {
 
 }
